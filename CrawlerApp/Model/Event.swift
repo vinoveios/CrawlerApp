@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class Event: NSObject {
     
     
@@ -25,6 +24,8 @@ class EventServiceHelper {
     
     var eventArray:NSMutableArray = NSMutableArray()
     
+    
+    
     func loadEvent(completion: @escaping CompletionHandler)
     {
         
@@ -32,6 +33,11 @@ class EventServiceHelper {
         
         let htmlData = NSData(contentsOf: sporekrniRL!)
         
+        if (htmlData == nil) {
+           
+            completion(false)
+            return
+        }
         let asumedUrl =  NSString(data: htmlData! as Data, encoding: String.Encoding.utf8.rawValue)
         
         let liTagArray
@@ -61,7 +67,6 @@ class EventServiceHelper {
             // Html tags
             let headerHtmlString = "//header";
             let sportsImageHtmlString = "//div[@class='col-md-2 col-sm-2 col-xs-2']";
-            
             let titleHtmlString = "//span[@class='notes_label']"
             let startDateHtmlString = "//span[@itemprop='startDate']"
             let channelimageString = "//div[@class='col-md-2 col-sm-2 col-xs-4 channel_icon']"
@@ -75,7 +80,7 @@ class EventServiceHelper {
             let eventIconUrlArray = Parser?.search(withXPathQuery:channelimageString)
             
             
-            var newArray=[Event]()
+            var internalEventArray=[Event]()
             
             for i  in 0..<titleArray!.count{
                 
@@ -89,38 +94,27 @@ class EventServiceHelper {
                 if (sportIconArray?.count)!>0 {
                     let element:TFHppleElement = (sportIconArray?[i] as! TFHppleElement).children[1] as! TFHppleElement
                     event.catUrl = (element.children[5]  as! TFHppleElement).attributes["src"] as! String
-                }else{
-                    event.catUrl = ""
                 }
                 
                 
                 // Title
                 if (titleArray?.count)!>0{
                     event.title  =  ((titleArray?[i] as! TFHppleElement).firstChild.content as String).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                }else{
-                    event.title = ""
                 }
-                
                 //Time
                 if (startDateArray?.count)!>0{
                     event.startDate=( (startDateArray?[i] as! TFHppleElement).firstChild.content as String).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                }else{
-                    event.startDate = ""
                 }
-                
                 // Channel icon
                 if  (eventIconUrlArray?.count)!>0 {
                     
                     
                     event.eventIconUrl = ((eventIconUrlArray?[i] as! TFHppleElement).children[1] as! TFHppleElement).attributes["src"] as! String
-                }else{
-                    event.eventIconUrl = ""
                 }
-                
-                newArray.append(event)
+                internalEventArray.append(event)
             }
             
-            eventArray.add(newArray)
+            eventArray.add(internalEventArray)
         }
         
         if eventArray.count==0 {

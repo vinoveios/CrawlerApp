@@ -221,6 +221,7 @@
 				TargetAttributes = {
 					376E4B7F1DCC56F2002E7DF1 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GGEEFEWFSV;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -454,6 +455,7 @@
 			baseConfigurationReference = 4F98640E4FB2712E84DF3871 /* Pods-CrawlerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GGEEFEWFSV;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = CrawlerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -469,6 +471,7 @@
 			baseConfigurationReference = 266BC5106E41DA919456E979 /* Pods-CrawlerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GGEEFEWFSV;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = CrawlerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
