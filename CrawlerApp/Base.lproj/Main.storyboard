@@ -6,6 +6,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Heavy.ttf">
+            <string>Lato-Heavy</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="101" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PD8-qp-gwd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="101" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PD8-qp-gwd">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -27,54 +35,52 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8XL-Oj-9X0" id="HDf-Xy-6Of">
-                                            <frame key="frameInset" width="375" height="101"/>
+                                            <frame key="frameInset" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGw-ne-mbV">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="gdF-Zb-BgN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHA-lR-KDL">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="PI8-tg-bNF"/>
-                                                        <constraint firstAttribute="width" constant="40" id="SJi-m9-qOD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sportIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Gr-Na-bAG">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="lE7-Ss-zbr"/>
-                                                        <constraint firstAttribute="width" constant="40" id="mbD-7r-etd"/>
+                                                        <constraint firstAttribute="height" constant="50" id="3F5-4o-hhE"/>
+                                                        <constraint firstAttribute="width" constant="50" id="nUM-sn-VNh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mTi-gn-gRQ">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="5TL-0N-YaQ"/>
-                                                        <constraint firstAttribute="height" constant="60" id="f3R-wB-ApN"/>
+                                                        <constraint firstAttribute="height" constant="71" id="QOa-J9-baG"/>
+                                                        <constraint firstAttribute="width" constant="70" id="c3L-BT-YPp"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHA-lR-KDL">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="07b-ev-feQ"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Rzh-qc-J0f"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="0.29019607843137252" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yHA-lR-KDL" firstAttribute="leading" secondItem="HDf-Xy-6Of" secondAttribute="leadingMargin" constant="2" id="4OO-uW-5ny"/>
-                                                <constraint firstItem="2Gr-Na-bAG" firstAttribute="leading" secondItem="yHA-lR-KDL" secondAttribute="trailing" constant="-40" id="7Mx-Dc-3SL"/>
-                                                <constraint firstItem="yHA-lR-KDL" firstAttribute="top" secondItem="HDf-Xy-6Of" secondAttribute="topMargin" constant="-3" id="8TK-Wk-4zU"/>
-                                                <constraint firstItem="mTi-gn-gRQ" firstAttribute="top" secondItem="HDf-Xy-6Of" secondAttribute="topMargin" constant="12" id="9z8-zt-Zml"/>
-                                                <constraint firstItem="2Gr-Na-bAG" firstAttribute="top" secondItem="yHA-lR-KDL" secondAttribute="bottom" constant="15" id="D0b-M9-kql"/>
-                                                <constraint firstItem="mTi-gn-gRQ" firstAttribute="leading" secondItem="jGw-ne-mbV" secondAttribute="trailing" constant="20" id="Fqy-Rq-6nl"/>
-                                                <constraint firstItem="jGw-ne-mbV" firstAttribute="leading" secondItem="yHA-lR-KDL" secondAttribute="trailing" constant="20" id="enX-rV-IjW"/>
-                                                <constraint firstItem="jGw-ne-mbV" firstAttribute="top" secondItem="HDf-Xy-6Of" secondAttribute="topMargin" constant="2" id="gIv-1a-hfV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="mTi-gn-gRQ" secondAttribute="trailing" constant="2" id="p8x-1N-HiX"/>
+                                                <constraint firstItem="2Gr-Na-bAG" firstAttribute="leading" secondItem="yHA-lR-KDL" secondAttribute="trailing" constant="-50" id="8uJ-wb-G60"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jGw-ne-mbV" secondAttribute="bottom" constant="7" id="MOO-e7-9jg"/>
+                                                <constraint firstItem="2Gr-Na-bAG" firstAttribute="top" secondItem="yHA-lR-KDL" secondAttribute="bottom" id="T2k-xi-1q0"/>
+                                                <constraint firstItem="yHA-lR-KDL" firstAttribute="top" secondItem="HDf-Xy-6Of" secondAttribute="topMargin" constant="7" id="TEk-tD-qJf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mTi-gn-gRQ" secondAttribute="trailing" constant="7" id="Xnc-sr-hth"/>
+                                                <constraint firstItem="yHA-lR-KDL" firstAttribute="leading" secondItem="HDf-Xy-6Of" secondAttribute="leadingMargin" constant="7" id="hZa-N0-Al2"/>
+                                                <constraint firstItem="jGw-ne-mbV" firstAttribute="leading" secondItem="2Gr-Na-bAG" secondAttribute="trailing" constant="10" id="jcM-Cv-rFV"/>
+                                                <constraint firstItem="jGw-ne-mbV" firstAttribute="top" secondItem="HDf-Xy-6Of" secondAttribute="topMargin" constant="7" id="lze-hr-sJ1"/>
+                                                <constraint firstItem="mTi-gn-gRQ" firstAttribute="top" secondItem="HDf-Xy-6Of" secondAttribute="topMargin" constant="7" id="xfJ-6k-mya"/>
+                                                <constraint firstItem="mTi-gn-gRQ" firstAttribute="leading" secondItem="jGw-ne-mbV" secondAttribute="trailing" constant="10" id="yK4-Q0-6If"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="contentIcon" destination="mTi-gn-gRQ" id="PwN-Pf-fWe"/>
-                                            <outlet property="sportIcon" destination="2Gr-Na-bAG" id="c5p-2w-3eV"/>
+                                            <outlet property="catIcon" destination="2Gr-Na-bAG" id="IAA-2K-1YO"/>
+                                            <outlet property="channelIcon" destination="mTi-gn-gRQ" id="1z7-IC-3tg"/>
                                             <outlet property="startTimeLabel" destination="yHA-lR-KDL" id="FLh-nd-9Pc"/>
                                             <outlet property="titleLabel" destination="jGw-ne-mbV" id="cAF-jr-ApL"/>
                                         </connections>
@@ -101,18 +107,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+            <point key="canvasLocation" x="1055.072463768116" y="123.09782608695653"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jun-OX-Hxc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bJi-Vb-43y" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sl0-ki-a34">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sl0-ki-a34">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -123,11 +129,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Waz-Mh-Uz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="108" y="68"/>
         </scene>
     </scenes>
     <resources>
-        <image name="channelIcon" width="30" height="19"/>
-        <image name="sportIcon" width="26" height="21"/>
+        <image name="channelIcon" width="60" height="13"/>
+        <image name="sportIcon" width="36" height="36"/>
     </resources>
 </document>

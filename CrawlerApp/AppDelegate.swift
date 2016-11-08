@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CrawlerApp
 //
-//  Created by Varun Tyagi on 04/11/16.
-//  Copyright © 2016 Varun Tyagi. All rights reserved.
+//  Created by Vinove on 08/11/16.
+//  Copyright © 2016 Vinove. All rights reserved.
 //
 
 import UIKit

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3764575B1DD18D76004B815B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764575A1DD18D76004B815B /* Utility.swift */; };
+		376457611DD1A3D0004B815B /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3764575F1DD1A3D0004B815B /* Lato-Bold.ttf */; };
+		376457621DD1A3D0004B815B /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376457601DD1A3D0004B815B /* Lato-Heavy.ttf */; };
 		3768FB8C1DD039A8008EA2C8 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3768FB851DD039A8008EA2C8 /* TFHpple.m */; };
 		3768FB8D1DD039A8008EA2C8 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3768FB871DD039A8008EA2C8 /* TFHppleElement.m */; };
 		3768FB8E1DD039A8008EA2C8 /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 3768FB891DD039A8008EA2C8 /* Tutorial.m */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		266BC5106E41DA919456E979 /* Pods-CrawlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrawlerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrawlerApp/Pods-CrawlerApp.release.xcconfig"; sourceTree = "<group>"; };
 		3764575A1DD18D76004B815B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Util/Utility.swift; sourceTree = "<group>"; };
+		3764575F1DD1A3D0004B815B /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		376457601DD1A3D0004B815B /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		3768FB841DD039A8008EA2C8 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		3768FB851DD039A8008EA2C8 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		3768FB861DD039A8008EA2C8 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -70,6 +74,24 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		3764575D1DD1A3D0004B815B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3768FB831DD039A8008EA2C8 /* HtmlParsing */,
+				3764575E1DD1A3D0004B815B /* Font */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3764575E1DD1A3D0004B815B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3764575F1DD1A3D0004B815B /* Lato-Bold.ttf */,
+				376457601DD1A3D0004B815B /* Lato-Heavy.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		3768FB831DD039A8008EA2C8 /* HtmlParsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +104,8 @@
 				3768FB8A1DD039A8008EA2C8 /* XPathQuery.h */,
 				3768FB8B1DD039A8008EA2C8 /* XPathQuery.m */,
 			);
-			path = HtmlParsing;
+			name = HtmlParsing;
+			path = ../HtmlParsing;
 			sourceTree = "<group>";
 		};
 		3768FB971DD03DB0008EA2C8 /* Frameworks */ = {
@@ -143,13 +166,13 @@
 				3768FB9E1DD07C6E008EA2C8 /* Model */,
 				3768FB9B1DD07C1F008EA2C8 /* TableViewCell */,
 				3768FB9A1DD07C0C008EA2C8 /* Controller */,
-				3768FB831DD039A8008EA2C8 /* HtmlParsing */,
 				376E4B831DCC56F3002E7DF1 /* AppDelegate.swift */,
 				376E4B871DCC56F3002E7DF1 /* Main.storyboard */,
 				376E4B8A1DCC56F3002E7DF1 /* Assets.xcassets */,
 				376E4B8C1DCC56F3002E7DF1 /* LaunchScreen.storyboard */,
 				376E4B8F1DCC56F3002E7DF1 /* Info.plist */,
 				3768FB961DD03C82008EA2C8 /* CrawlerApp-Bridging-Header.h */,
+				3764575D1DD1A3D0004B815B /* Resource */,
 			);
 			path = CrawlerApp;
 			sourceTree = "<group>";
@@ -230,9 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376457621DD1A3D0004B815B /* Lato-Heavy.ttf in Resources */,
 				376E4B8E1DCC56F3002E7DF1 /* LaunchScreen.storyboard in Resources */,
 				376E4B8B1DCC56F3002E7DF1 /* Assets.xcassets in Resources */,
 				376E4B891DCC56F3002E7DF1 /* Main.storyboard in Resources */,
+				376457611DD1A3D0004B815B /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
