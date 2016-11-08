@@ -1,0 +1,6 @@
+framework module Pods_CrawlerApp {
+  umbrella header "Pods-CrawlerApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
